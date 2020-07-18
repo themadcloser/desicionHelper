@@ -1,0 +1,116 @@
+// Action script...
+// need to convert it to an arry
+// [Action in Frame 1]
+function reset()
+{
+    rez1_txt.text = 0;
+    rez2_txt.text = 0;
+    rez3_txt.text = 0;
+    rez4_txt.text = 0;
+    rez5_txt.text = 0;
+    rez6_txt.text = 0;
+    rez7_txt.text = 0;
+    rez8_txt.text = 0;
+    rez9_txt.text = 0;
+    rez10_txt.text = 0;
+    rez11_txt.text = 0;
+    rez12_txt.text = 0;
+    rez13_txt.text = 0;
+    rez14_txt.text = 0;
+    rez15_txt.text = 0;
+    rez16_txt.text = 0;
+    rez17_txt.text = 0;
+    rez18_txt.text = 0;
+    rez19_txt.text = 0;
+    rez20_txt.text = 0;
+    rez21_txt.text = 0;
+    rez22_txt.text = 0;
+    rez23_txt.text = 0;
+    var _l21 = 0;
+    var _l18 = 0;
+    var _l15 = 0;
+    var _l12 = 0;
+    var _l9 = 0;
+    var _l7 = 0;
+    var _l5 = 0;
+    var _l3 = 0;
+    var _l1 = 0;
+    var _l22 = 0;
+    var _l19 = 0;
+    var _l16 = 0;
+    var _l13 = 0;
+    var _l10 = 0;
+    var _l8 = 0;
+    var _l6 = 0;
+    var _l4 = 0;
+    var _l2 = 0;
+    var _l23 = 0;
+    var _l20 = 0;
+    var _l17 = 0;
+    var _l14 = 0;
+    var _l11 = 0;
+} // End of the function
+reset_btn.onRelease = function ()
+{
+    reset();
+    res_mc._width = 1;
+};
+calc_btn.onRelease = function ()
+{
+    var _l21 = Number(rez1_txt.text);
+    var _l18 = Number(rez2_txt.text);
+    var _l15 = Number(rez3_txt.text);
+    var _l12 = Number(rez4_txt.text);
+    var _l9 = Number(rez5_txt.text);
+    var _l7 = Number(rez6_txt.text);
+    var _l5 = Number(rez7_txt.text);
+    var _l3 = Number(rez8_txt.text);
+    var _l1 = Number(rez9_txt.text);
+    var _l22 = Number(rez10_txt.text);
+    var _l19 = Number(rez11_txt.text);
+    var _l16 = Number(rez12_txt.text);
+    var _l13 = Number(rez13_txt.text);
+    var _l10 = Number(rez14_txt.text);
+    var _l8 = Number(rez15_txt.text);
+    var _l6 = Number(rez16_txt.text);
+    var _l4 = Number(rez17_txt.text);
+    var _l2 = Number(rez18_txt.text);
+    var _l23 = Number(rez19_txt.text);
+    var _l20 = Number(rez20_txt.text);
+    var _l17 = Number(rez21_txt.text);
+    var _l14 = Number(rez22_txt.text);
+    var _l11 = Number(rez23_txt.text);
+    rez_txt.text = (_l21 + _l18 + _l15 + _l12 + _l9 + _l7 + _l5 + _l3 + _l1 + _l22 + _l19 + _l16 + _l13 + _l10 + _l8 + _l6 + _l4 + _l2 + _l23 + _l20 + _l17 + _l14 + _l11) / 23;
+    res_mc._width = Number(rez_txt.text) * 5;
+};
+
+
+//////////////////////////
+
+// on click events for each buttun
+
+// Action script...
+
+// [Action in Frame 1]
+var xpos = sliderNob_mc._x;
+var ypos = sliderNob_mc._y;
+var drag = false;
+sliderNob_mc.onPress = function ()
+{
+    startDrag(this, false, xpos, ypos, xpos, ypos + 100);
+    drag = true;
+};
+sliderNob_mc.onRelease = sliderNob_mc.onReleaseOutside = function ()
+{
+    stopDrag();
+    drag = false;
+};
+sliderNob_mc.onMouseMove = function ()
+{
+    if (drag)
+    {
+        var _l3 = Math.floor(-1 * (this._y - 110));
+        _root.rez3_txt.text = _l3.toString();
+    } // end if
+};
+
